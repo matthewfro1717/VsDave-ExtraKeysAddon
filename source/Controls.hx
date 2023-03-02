@@ -12,7 +12,6 @@ import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
 
-#if (haxe >= "4.2.5")
 enum abstract Action(String) to String from String
 {
 	var UP = "up";
@@ -508,9 +507,6 @@ class Controls extends FlxActionSet
 	var _t10R = new FlxActionDigital(Action.T10_R);
 	var _t11R = new FlxActionDigital(Action.T11_R);
 
-	#if (haxe >= "4.2.5")
-	var byName:Map<String, FlxActionDigital> = [];
-	#else
 	var byName:Map<String, FlxActionDigital> = new Map<String, FlxActionDigital>();
 	#end
 
@@ -900,7 +896,6 @@ class Controls extends FlxActionSet
 	inline function get_T10_R() return _t10R.check();
 	inline function get_T11_R() return _t11R.check();
 
-	#if (haxe >= "4.2.5")
 	public function new(name, scheme = None)
 	{
 		super(name);
@@ -1495,16 +1490,6 @@ class Controls extends FlxActionSet
 
 	public function copyFrom(controls:Controls, ?device:Device)
 	{
-		#if (haxe >= "4.2.5")
-		for (name => action in controls.byName)
-		{
-			for (input in action.inputs)
-			{
-				if (device == null || isDevice(input, device))
-					byName[name].add(cast input);
-			}
-		}
-		#else
 		for (name in controls.byName.keys())
 		{
 			var action = controls.byName[name];
@@ -1569,9 +1554,6 @@ class Controls extends FlxActionSet
 			if(i == NONE) copyKeys.remove(i);
 		}
 
-		#if (haxe >= "4.2.5")
-		inline forEachBound(control, (action, state) -> addKeys(action, keys, state));
-		#else
 		forEachBound(control, function(action, state) addKeys(action, keys, state));
 		#end
 	}
@@ -1587,9 +1569,6 @@ class Controls extends FlxActionSet
 			if(i == NONE) copyKeys.remove(i);
 		}
 
-		#if (haxe >= "4.2.5")
-		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
-		#else
 		forEachBound(control, function(action, _) removeKeys(action, keys));
 		#end
 	}
@@ -1971,11 +1950,7 @@ class Controls extends FlxActionSet
 	public function addGamepad(id:Int, ?buttonMap:Map<Control, Array<FlxGamepadInputID>>):Void
 	{
 		gamepadsAdded.push(id);
-		
-		#if (haxe >= "4.2.5")
-		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
-		#else
+
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
 		#end
@@ -1985,10 +1960,6 @@ class Controls extends FlxActionSet
 	{
 		gamepadsAdded.push(id);
 
-		#if (haxe >= "4.2.5")
-		for (control => buttons in buttonMap)
-			inline bindButtons(control, id, buttons);
-		#else
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
 		#end
@@ -2048,9 +2019,6 @@ class Controls extends FlxActionSet
 	 */
 	public function bindButtons(control:Control, id, buttons)
 	{
-		#if (haxe >= "4.2.5")
-		inline forEachBound(control, (action, state) -> addButtons(action, buttons, state, id));
-		#else
 		forEachBound(control, function(action, state) addButtons(action, buttons, state, id));
 		#end
 	}
@@ -2061,9 +2029,6 @@ class Controls extends FlxActionSet
 	 */
 	public function unbindButtons(control:Control, gamepadID:Int, buttons)
 	{
-		#if (haxe >= "4.2.5")
-		inline forEachBound(control, (action, _) -> removeButtons(action, gamepadID, buttons));
-		#else
 		forEachBound(control, function(action, _) removeButtons(action, gamepadID, buttons));
 		#end
 	}
