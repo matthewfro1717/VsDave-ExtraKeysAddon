@@ -368,6 +368,154 @@ enum KeyboardScheme
  */
 class Controls extends FlxActionSet
 {
+	var _up = new FlxActionDigital(Action.UP);
+	var _left = new FlxActionDigital(Action.LEFT);
+	var _right = new FlxActionDigital(Action.RIGHT);
+	var _down = new FlxActionDigital(Action.DOWN);
+	var _upP = new FlxActionDigital(Action.UP_P);
+	var _leftP = new FlxActionDigital(Action.LEFT_P);
+	var _rightP = new FlxActionDigital(Action.RIGHT_P);
+	var _downP = new FlxActionDigital(Action.DOWN_P);
+	var _upR = new FlxActionDigital(Action.UP_R);
+	var _leftR = new FlxActionDigital(Action.LEFT_R);
+	var _rightR = new FlxActionDigital(Action.RIGHT_R);
+	var _downR = new FlxActionDigital(Action.DOWN_R);
+	var _accept = new FlxActionDigital(Action.ACCEPT);
+	var _back = new FlxActionDigital(Action.BACK);
+	var _pause = new FlxActionDigital(Action.PAUSE);
+	var _reset = new FlxActionDigital(Action.RESET);
+	var _cheat = new FlxActionDigital(Action.CHEAT);
+	var _key5 = new FlxActionDigital(Action.KEY5);
+	var _center = new FlxActionDigital(Action.CENTER);
+	var _centerP = new FlxActionDigital(Action.CENTER_P);
+	var _centerR = new FlxActionDigital(Action.CENTER_R);
+
+	var _l1 = new FlxActionDigital(Action.L1);
+	var _l1P = new FlxActionDigital(Action.L1_P);
+	var _l1R = new FlxActionDigital(Action.L1_R);
+
+	var _u = new FlxActionDigital(Action.U1);
+	var _uP = new FlxActionDigital(Action.U1_P);
+	var _uR = new FlxActionDigital(Action.U1_R);
+
+	var _r1 = new FlxActionDigital(Action.R1);
+	var _r1P = new FlxActionDigital(Action.R1_P);
+	var _r1R = new FlxActionDigital(Action.R1_R);
+
+	var _l2 = new FlxActionDigital(Action.L2);
+	var _l2P = new FlxActionDigital(Action.L2_P);
+	var _l2R = new FlxActionDigital(Action.L2_R);
+
+	var _d = new FlxActionDigital(Action.D1);
+	var _dP = new FlxActionDigital(Action.D1_P);
+	var _dR = new FlxActionDigital(Action.D1_R);
+
+	var _r2 = new FlxActionDigital(Action.R2);
+	var _r2P = new FlxActionDigital(Action.R2_P);
+	var _r2R = new FlxActionDigital(Action.R2_R);
+
+
+	var _a0 = new FlxActionDigital(Action.A0);
+	var _a1 = new FlxActionDigital(Action.A1);
+	var _a2 = new FlxActionDigital(Action.A2);
+	var _a3 = new FlxActionDigital(Action.A3);
+	var _a4 = new FlxActionDigital(Action.A4);
+	var _a5 = new FlxActionDigital(Action.A5);
+	var _a6 = new FlxActionDigital(Action.A6);
+
+	var _a0P = new FlxActionDigital(Action.A0_P);
+	var _a1P = new FlxActionDigital(Action.A1_P);
+	var _a2P = new FlxActionDigital(Action.A2_P);
+	var _a3P = new FlxActionDigital(Action.A3_P);
+	var _a4P = new FlxActionDigital(Action.A4_P);
+	var _a5P = new FlxActionDigital(Action.A5_P);
+	var _a6P = new FlxActionDigital(Action.A6_P);
+
+	var _a0R = new FlxActionDigital(Action.A0_R);
+	var _a1R = new FlxActionDigital(Action.A1_R);
+	var _a2R = new FlxActionDigital(Action.A2_R);
+	var _a3R = new FlxActionDigital(Action.A3_R);
+	var _a4R = new FlxActionDigital(Action.A4_R);
+	var _a5R = new FlxActionDigital(Action.A5_R);
+	var _a6R = new FlxActionDigital(Action.A6_R);
+
+	var _n0 = new FlxActionDigital(Action.N0);
+	var _n1 = new FlxActionDigital(Action.N1);
+	var _n2 = new FlxActionDigital(Action.N2);
+	var _n3 = new FlxActionDigital(Action.N3);
+	var _n4 = new FlxActionDigital(Action.N4);
+	var _n5 = new FlxActionDigital(Action.N5);
+	var _n6 = new FlxActionDigital(Action.N6);
+	var _n7 = new FlxActionDigital(Action.N7);
+	var _n8 = new FlxActionDigital(Action.N8);
+
+	var _n0P = new FlxActionDigital(Action.N0_P);
+	var _n1P = new FlxActionDigital(Action.N1_P);
+	var _n2P = new FlxActionDigital(Action.N2_P);
+	var _n3P = new FlxActionDigital(Action.N3_P);
+	var _n4P = new FlxActionDigital(Action.N4_P);
+	var _n5P = new FlxActionDigital(Action.N5_P);
+	var _n6P = new FlxActionDigital(Action.N6_P);
+	var _n7P = new FlxActionDigital(Action.N7_P);
+	var _n8P = new FlxActionDigital(Action.N8_P);
+
+	var _n0R = new FlxActionDigital(Action.N0_R);
+	var _n1R = new FlxActionDigital(Action.N1_R);
+	var _n2R = new FlxActionDigital(Action.N2_R);
+	var _n3R = new FlxActionDigital(Action.N3_R);
+	var _n4R = new FlxActionDigital(Action.N4_R);
+	var _n5R = new FlxActionDigital(Action.N5_R);
+	var _n6R = new FlxActionDigital(Action.N6_R);
+	var _n7R = new FlxActionDigital(Action.N7_R);
+	var _n8R = new FlxActionDigital(Action.N8_R);
+
+	var _t0 = new FlxActionDigital(Action.T0);
+	var _t1 = new FlxActionDigital(Action.T1);
+	var _t2 = new FlxActionDigital(Action.T2);
+	var _t3 = new FlxActionDigital(Action.T3);
+	var _t4 = new FlxActionDigital(Action.T4);
+	var _t5 = new FlxActionDigital(Action.T5);
+	var _t6 = new FlxActionDigital(Action.T6);
+	var _t7 = new FlxActionDigital(Action.T7);
+	var _t8 = new FlxActionDigital(Action.T8);
+	var _t9 = new FlxActionDigital(Action.T9);
+	var _t10 = new FlxActionDigital(Action.T10);
+	var _t11 = new FlxActionDigital(Action.T11);
+
+	var _t0P = new FlxActionDigital(Action.T0_P);
+	var _t1P = new FlxActionDigital(Action.T1_P);
+	var _t2P = new FlxActionDigital(Action.T2_P);
+	var _t3P = new FlxActionDigital(Action.T3_P);
+	var _t4P = new FlxActionDigital(Action.T4_P);
+	var _t5P = new FlxActionDigital(Action.T5_P);
+	var _t6P = new FlxActionDigital(Action.T6_P);
+	var _t7P = new FlxActionDigital(Action.T7_P);
+	var _t8P = new FlxActionDigital(Action.T8_P);
+	var _t9P = new FlxActionDigital(Action.T9_P);
+	var _t10P = new FlxActionDigital(Action.T10_P);
+	var _t11P = new FlxActionDigital(Action.T11_P);
+
+	var _t0R = new FlxActionDigital(Action.T0_R);
+	var _t1R = new FlxActionDigital(Action.T1_R);
+	var _t2R = new FlxActionDigital(Action.T2_R);
+	var _t3R = new FlxActionDigital(Action.T3_R);
+	var _t4R = new FlxActionDigital(Action.T4_R);
+	var _t5R = new FlxActionDigital(Action.T5_R);
+	var _t6R = new FlxActionDigital(Action.T6_R);
+	var _t7R = new FlxActionDigital(Action.T7_R);
+	var _t8R = new FlxActionDigital(Action.T8_R);
+	var _t9R = new FlxActionDigital(Action.T9_R);
+	var _t10R = new FlxActionDigital(Action.T10_R);
+	var _t11R = new FlxActionDigital(Action.T11_R);
+
+	#if (haxe >= "4.0.0")
+	var byName:Map<String, FlxActionDigital> = [];
+	#else
+	var byName:Map<String, FlxActionDigital> = new Map<String, FlxActionDigital>();
+	#end
+
+	public var gamepadsAdded:Array<Int> = [];
+	public var keyboardScheme = KeyboardScheme.None;
 
 	public var UP(get, never):Bool;
 
@@ -753,105 +901,6 @@ class Controls extends FlxActionSet
 	inline function get_T11_R() return _t11R.check();
 
 	#if (haxe >= "4.0.0")
-	var byName:Map<String, FlxActionDigital> = [];
-	#else
-	var byName:Map<String, FlxActionDigital> = new Map<String, FlxActionDigital>();
-	#end
-
-	public var gamepadsAdded:Array<Int> = [];
-	public var keyboardScheme = KeyboardScheme.None;
-
-	public var UP(get, never):Bool;
-
-	inline function get_UP()
-		return _up.check();
-
-	public var LEFT(get, never):Bool;
-
-	inline function get_LEFT()
-		return _left.check();
-
-	public var RIGHT(get, never):Bool;
-
-	inline function get_RIGHT()
-		return _right.check();
-
-	public var DOWN(get, never):Bool;
-
-	inline function get_DOWN()
-		return _down.check();
-
-	public var UP_P(get, never):Bool;
-
-	inline function get_UP_P()
-		return _upP.check();
-
-	public var LEFT_P(get, never):Bool;
-
-	inline function get_LEFT_P()
-		return _leftP.check();
-
-	public var RIGHT_P(get, never):Bool;
-
-	inline function get_RIGHT_P()
-		return _rightP.check();
-
-	public var DOWN_P(get, never):Bool;
-
-	inline function get_DOWN_P()
-		return _downP.check();
-
-	public var UP_R(get, never):Bool;
-
-	inline function get_UP_R()
-		return _upR.check();
-
-	public var LEFT_R(get, never):Bool;
-
-	inline function get_LEFT_R()
-		return _leftR.check();
-
-	public var RIGHT_R(get, never):Bool;
-
-	inline function get_RIGHT_R()
-		return _rightR.check();
-
-	public var DOWN_R(get, never):Bool;
-
-	inline function get_DOWN_R()
-		return _downR.check();
-
-	public var ACCEPT(get, never):Bool;
-
-	inline function get_ACCEPT()
-		return _accept.check();
-
-	public var BACK(get, never):Bool;
-
-	inline function get_BACK()
-		return _back.check();
-
-	public var PAUSE(get, never):Bool;
-
-	inline function get_PAUSE()
-		return _pause.check();
-
-	public var RESET(get, never):Bool;
-
-	inline function get_RESET()
-		return _reset.check();
-
-	public var KEY5(get, never):Bool;
-
-	inline function get_KEY5()
-		return _key5.check();
-
-	public var CHEAT(get, never):Bool;
-
-	inline function get_CHEAT()
-		return _cheat.check();
-
-	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
 	{
 		super(name);
@@ -1139,7 +1188,7 @@ class Controls extends FlxActionSet
 
 		for (action in digitalActions)
 			byName[action.name] = action;
-
+			
 		if (scheme == null)
 			scheme = None;
 		setKeyboardScheme(scheme, false);
@@ -1462,7 +1511,7 @@ class Controls extends FlxActionSet
 			for (input in action.inputs)
 			{
 				if (device == null || isDevice(input, device))
-					byName[name].add(cast input);
+				byName[name].add(cast input);
 			}
 		}
 		#end
@@ -1478,7 +1527,7 @@ class Controls extends FlxActionSet
 				#else
 				for (gamepad in controls.gamepadsAdded)
 					if (gamepadsAdded.indexOf(gamepad) == -1)
-						gamepadsAdded.push(gamepad);
+					  gamepadsAdded.push(gamepad);
 				#end
 
 				mergeKeyboardScheme(controls.keyboardScheme);
@@ -1515,6 +1564,11 @@ class Controls extends FlxActionSet
 	 */
 	public function bindKeys(control:Control, keys:Array<FlxKey>)
 	{
+		var copyKeys:Array<FlxKey> = keys.copy();
+		for (i in 0...copyKeys.length) {
+			if(i == NONE) copyKeys.remove(i);
+		}
+
 		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, state) -> addKeys(action, keys, state));
 		#else
@@ -1528,6 +1582,11 @@ class Controls extends FlxActionSet
 	 */
 	public function unbindKeys(control:Control, keys:Array<FlxKey>)
 	{
+		var copyKeys:Array<FlxKey> = keys.copy();
+		for (i in 0...copyKeys.length) {
+			if(i == NONE) copyKeys.remove(i);
+		}
+
 		#if (haxe >= "4.0.0")
 		inline forEachBound(control, (action, _) -> removeKeys(action, keys));
 		#else
@@ -1538,7 +1597,8 @@ class Controls extends FlxActionSet
 	inline static function addKeys(action:FlxActionDigital, keys:Array<FlxKey>, state:FlxInputState)
 	{
 		for (key in keys)
-			action.addKey(key, state);
+			if(key != NONE)
+				action.addKey(key, state);
 	}
 
 	static function removeKeys(action:FlxActionDigital, keys:Array<FlxKey>)
@@ -1558,7 +1618,7 @@ class Controls extends FlxActionSet
 			removeKeyboard();
 
 		keyboardScheme = scheme;
-
+		
 		switch (scheme)
 		{
 			case Solo:
@@ -1807,7 +1867,6 @@ class Controls extends FlxActionSet
 				inline bindKeys(Control.T11, [SEMICOLON, NONE]);
 		}
 	}
-
 	public static function stringControlToControl(control:String):Control
 	{
 		switch (control)
@@ -1912,10 +1971,10 @@ class Controls extends FlxActionSet
 	public function addGamepad(id:Int, ?buttonMap:Map<Control, Array<FlxGamepadInputID>>):Void
 	{
 		gamepadsAdded.push(id);
-
+		
 		#if (haxe >= "4.0.0")
 		for (control => buttons in buttonMap)
-		inline bindButtons(control, id, buttons);
+			inline bindButtons(control, id, buttons);
 		#else
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
@@ -1928,7 +1987,7 @@ class Controls extends FlxActionSet
 
 		#if (haxe >= "4.0.0")
 		for (control => buttons in buttonMap)
-		inline bindButtons(control, id, buttons);
+			inline bindButtons(control, id, buttons);
 		#else
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
