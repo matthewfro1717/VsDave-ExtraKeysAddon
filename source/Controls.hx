@@ -2004,7 +2004,6 @@ class Controls extends FlxActionSet
 	public function bindButtons(control:Control, id, buttons)
 	{
 		forEachBound(control, function(action, state) addButtons(action, buttons, state, id));
-		#end
 	}
 
 	/**
@@ -2014,7 +2013,6 @@ class Controls extends FlxActionSet
 	public function unbindButtons(control:Control, gamepadID:Int, buttons)
 	{
 		forEachBound(control, function(action, _) removeButtons(action, gamepadID, buttons));
-		#end
 	}
 
 	inline static function addButtons(action:FlxActionDigital, buttons:Array<FlxGamepadInputID>, state, id)
