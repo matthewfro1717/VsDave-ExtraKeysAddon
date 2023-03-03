@@ -1939,7 +1939,6 @@ class Controls extends FlxActionSet
 
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
-		#end
 	}
 
 	inline function addGamepadLiteral(id:Int, ?buttonMap:Map<Control, Array<FlxGamepadInputID>>):Void
@@ -1948,7 +1947,6 @@ class Controls extends FlxActionSet
 
 		for (control in buttonMap.keys())
 			bindButtons(control, id, buttonMap[control]);
-		#end
 	}
 
 	public function removeGamepad(deviceID:Int = FlxInputDeviceID.ALL):Void
