@@ -506,7 +506,6 @@ class Controls extends FlxActionSet
 	var _t11R = new FlxActionDigital(Action.T11_R);
 
 	var byName:Map<String, FlxActionDigital> = new Map<String, FlxActionDigital>();
-	#end
 
 	public var gamepadsAdded:Array<Int> = [];
 	public var keyboardScheme = KeyboardScheme.None;
@@ -1503,15 +1502,9 @@ class Controls extends FlxActionSet
 		{
 			case null:
 				// add all
-				#if (haxe >= "4.2.5")
-				for (gamepad in controls.gamepadsAdded)
-					if (!gamepadsAdded.contains(gamepad))
-						gamepadsAdded.push(gamepad);
-				#else
 				for (gamepad in controls.gamepadsAdded)
 					if (gamepadsAdded.indexOf(gamepad) == -1)
 					  gamepadsAdded.push(gamepad);
-				#end
 
 				mergeKeyboardScheme(controls.keyboardScheme);
 
